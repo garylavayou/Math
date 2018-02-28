@@ -2,7 +2,7 @@
 function new_trend = update_trend(cur_trend, args2, options)
 
 if isfield(options, 'bPurge') && options.bPurge
-    len  = args2;
+    len = args2;
     b_purge = false(length(cur_trend),1);
     for i = 1:length(cur_trend)
         if cur_trend(end).index - cur_trend(i).index >= len
