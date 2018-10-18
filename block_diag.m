@@ -2,8 +2,13 @@
 %
 %% Function declaration
 %   A = block_diag( block_elements )
-% See also diag.
-%% TODO: varargin
+%   A = block_diag( block_elements, k )
+%				Repeat the block diagnoal consist of |block_elements| for |k|
+%				times. 
+%
+% See also <diag>.
+%% varargin
+% see <blkdiag>.
 function A = block_diag( block_elements, k )
 if nargin <= 1
     k = 1;
