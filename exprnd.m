@@ -1,7 +1,10 @@
 function x = exprnd(varargin)
 v = ver('stats');
 if ~isempty(v) && license('test', 'statistics_toolbox')
-  x = builtin('exprnd', varargin{:});
+  cmd_path = fullfile(matlabroot,'toolbox','stats\stats');
+  old_path = cd(cmd_path);
+  x = exprnd(varargin{:});   % expnd cannot be invoked by <builtin>.
+  cd(old_path);
 else
   if nargin == 1
     sizes = {1};
