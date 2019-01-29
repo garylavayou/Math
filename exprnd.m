@@ -14,6 +14,5 @@ else
   x = -varargin{1}*log(rand(sizes{:}));     % varargin{1} is the 'mean_time'
 end
 %  x = 1/λ*ln(y)   y is uniform distribution
-
 end
 
